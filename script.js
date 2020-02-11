@@ -31,7 +31,6 @@ renderItem(data.complete[i], true);
 
 const dataUpdateStorage = function() {
 localStorage.setItem('localData', JSON.stringify(data));
-console.log(localStorage.getItem('localData'));
 };
 
 form.addEventListener('submit', function(event) {
@@ -68,8 +67,7 @@ const itemParent = item.parentNode;
 const id = itemParent.id;
 const text = item.textContent;
 
-let target;
-// определям, куда помещать задачи (выполненные и запланированные)    
+let target;    
 if(id === 'todo') {
 target = completedCont;
 } else {
